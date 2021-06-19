@@ -7,7 +7,7 @@ Build a deep learning model to predict the type of a liver disease based on the 
 The dataset contains the different patients records with 4 types of liver disease. The dataset is used to build a Deep Learning model. Using the following shown key attributes of a patient the model is developed to predict the type of liver disease the patient has:
 Here is the sample data and attributes for reference:
 
-![images](Picture1.png)
+![images 1](Picture1.png)
  
 ## Steps Performed:
 ## 1.	Exploratory Data Analysis using visualizations in pandas, matplotlb and seaborn
