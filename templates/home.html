@@ -1,0 +1,118 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+function changedata(img)
+{
+ <!--document.getElementById("first").style.display ='block';-->
+ var elements = document.getElementsByClassName(img);
+	alert(elements);
+}
+</script>
+
+<meta charset="UTF-8">
+<title>Prediction</title> 
+  
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+
+<div class="container">
+	<div class="jumbotron text-center">
+	  <h1 class="header-text1"> <strong>Predict Liver Disease</strong> </h1>
+	</div>
+	
+	<div class="card">
+		<div class="row">
+			<h3>Enter patient's details:</h3>
+			<form  method="POST">
+			<div class="col-lg-6 listImageColumn">
+			 
+				{# This hidden_tag is a CSRF security feature. #}
+				{{ form.hidden_tag() }}
+				<br>
+				<br>
+				{{form.gender.label}} <br> {{form.gender}}
+				<br>
+				<br>
+				{{form.vomit.label}} <br> {{form.vomit}}
+				<br>
+				<br>
+				{{form.diarrhea.label}} <br> {{form.diarrhea}}
+				<br>
+				<br>
+				{{form.jaundice.label}} <br> {{form.jaundice}}
+				<br>
+				<br>
+				{{form.age.label}} <br> {{form.age}}
+				<br>
+				<br>
+				{{form.wbc.label}} <br> {{form.wbc}}
+				<br>
+				<br>
+				{{form.hgb.label}} <br> {{form.hgb}}
+				<br>
+				<br>
+				{{form.ast.label}} <br> {{form.ast}}
+				<br>
+				<br>
+				{{form.rna.label}} <br> {{form.rna}}
+				<br>
+				<br>
+				<hr class="header-line">
+				{{ form.submit() }}
+		</div>
+		
+		<div class="col-lg-6 listImageColumn">
+				{# This hidden_tag is a CSRF security feature. #}
+				{{ form.hidden_tag() }}
+				<br>
+				<br>
+				{{form.fever.label}} <br> {{form.fever}}
+				<br>
+				<br>
+				{{form.headache.label}} <br> {{form.headache}}
+				<br>
+				<br>
+				{{form.fatigue.label}} <br> {{form.fatigue}}
+				<br>
+				<br>
+				{{form.epigastric.label}} <br>{{form.epigastric}}
+				<br>
+				<br>
+				{{form.bmi.label}} <br> {{form.bmi}}
+				<br>
+				<br>
+				{{form.rbc.label}} <br> {{form.rbc}}
+				<br>
+				<br>
+				{{form.plat.label}} <br> {{form.plat}}
+				<br>
+				<br>
+				{{form.alt.label}} <br> {{form.alt}}
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<hr class="header-line">
+			
+			  
+		</div>
+		</form>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
